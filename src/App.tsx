@@ -8,20 +8,21 @@ import PronunciationPage from "./pages/PronunciationPage";
 import SpeakingPage from "./pages/SpeakingPage";
 import DialoguePage from "./pages/DialoguePage";
 import PhrasesPage from "./pages/PhrasesPage";
+import Layout from "./components/Layout";
 
 export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/practice" element={<PracticePage />} />
-        <Route path="/result" element={<ResultPage />} />
-        <Route path="/records" element={<RecordsPage />} />
-        <Route path="/learn" element={<LearnPage />} />
-        <Route path="/pronunciation" element={<PronunciationPage />} />
-        <Route path="/speaking" element={<SpeakingPage />} />
-        <Route path="/dialogue" element={<DialoguePage />} />
-        <Route path="/phrases" element={<PhrasesPage />} />
+        <Route path="/" element={<Layout><HomePage /></Layout>} />
+        <Route path="/practice" element={<Layout><PracticePage /></Layout>} />
+        <Route path="/result" element={<Layout><ResultPage /></Layout>} />
+        <Route path="/records" element={<Layout><RecordsPage /></Layout>} />
+        <Route path="/learn" element={<Layout><LearnPage /></Layout>} />
+        <Route path="/pronunciation" element={<Layout><PronunciationPage /></Layout>} />
+        <Route path="/speaking" element={<Layout><SpeakingPage /></Layout>} />
+        <Route path="/dialogue" element={<Layout><DialoguePage /></Layout>} />
+        <Route path="/phrases" element={<Layout><PhrasesPage /></Layout>} />
       </Routes>
     </Router>
   );

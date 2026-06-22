@@ -45,3 +45,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #2a6b66;
 }
+
+/* Custom container width */
+@layer utilities {
+  .container {
+    max-width: 1100px;
+  }
+}
